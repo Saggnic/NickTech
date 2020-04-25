@@ -2,6 +2,9 @@ package com.example.nicktech.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+import javax.xml.ws.BindingType;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,11 +21,11 @@ public class CompanyController {
 	private CompanyService companyService;
 	
 	@RequestMapping("/createCompany")
-	public String createCompany() {
+	public String createCompany(@Valid Company company1) {
 		
 		Company company= new Company();
 		company.setCompanydetails("details are to be given");
-		company.setCompanyName("ABC Company");
+		company.setCompanyName("122 Company");
 		company.setLocation("Hyd");
 		company.setSalary(20000);
 		
